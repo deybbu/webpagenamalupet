@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to FEU-Roosevelt, home to a vibrant learning community committed to academic excellence and student engagement.">
+    <meta name="keywords" content="FEU-Roosevelt, University, Education, Student Events, Campus Life">
+    <meta name="author" content="FEU-Roosevelt University">
+    <title>FEU-Roosevelt - Journey to Success</title>
+    <link rel="icon" type="image/png" href="feur_logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('FU9oD2dUUAUqsWa.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0.8);
+    z-index: -1;
+}
+
+header {
+    background-color: darkgreen;
+    color: #FFD700;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header img {
+    width: 100px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 30px;
+    margin: 0;
+    font-family: Constantia;
+    font-weight: 300;
+    text-align: center;
+}
+
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+body p {
+    font-size: 18px;
+    color: white;
+    font-weight: 100;
+}
+
+.section-header p {
+    font-size: 18px;
+    font-family: Book Antiqua;
+    color: black;
+    font-weight: 600;
+}
+
+
+nav {
+    background-color: darkgreen;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    font-weight: bold;
+}
+
+nav a {
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #264653;
+    color: #FFD700;
+}
+
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    color: black;
+}
+
+h1 {
+    color: white;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header h2 {
+    color: black;
+    font-family: 'Roboto', Arial, sans-serif;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin: 0;
+}
+
+h3 {
+    color: black;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+main h2 {
+    color: white;
+    font-family: Book Antiqua;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-header {
+    background-color: rgb(255, 255, 255, 0.7);
+    padding: 20px;
+    color: black;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #EDE9D8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    object-fit: cover;
+    background-color: #EDE9D8;
+}
+
+.card h3 {
+    margin-top: 15px;
+    color: black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.card p {
+    font-size: 18px;
+    color: black;
+    font-weight: 100;
+}
+
+footer {
+    background-color: green;
+    color: #FFD700;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 100;
+}
+
+
+#backToTop {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: gold;
+            color: black;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            transition: opacity 0.3s;
+        }
+
+        #backToTop:hover {
+            background-color: green;
+        }
+
+/* 2xl */
+@media (max-width: 1536px) {}
+
+/* xl */
+@media (max-width: 1280px) {}
+
+/* lg */
+@media (max-width: 1024px) {}
+
+/* md */
+@media (max-width: 768px) {}
+
+/* sm */
+@media (max-width: 640px) {}
+
+/* xs */
+@media (max-width: 475px) {}
+
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* xs */
+@media (min-width: 475px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* sm */
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* md */
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* lg */
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* xl */
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* 2xl */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
+.container {
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}
+
+    </style>
+</head>
+<body>
+    
+    <header>
+        <img src="feur_logo.png" alt="FEU-Roosevelt Logo">
+        <div>
+            <h1>Our Journey as College Freshmen of FEU-Roosevelt.</h1>
+        </div>
+    </header>
+
+    
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#halloween-event">Halloween Event</a>
+        <a href="#sinag-tamaraw">Sinag Tamaraw</a>
+        <a href="#pasko-sa-piyu">Pasko sa Piyu</a>
+        <a href="#candid">Group Experience</a>
+        <a href="#life-lessons">Life Lessons</a>
+        <a href="#web-creators">About Us</a>
+    </nav>
+
+    
+    <main>
+        <section id="home" class="section-header">
+            <h2>Welcome to Our School’s Exciting Events!</h2>
+            <p>Join us with our journey as first year students of FEU Roosevelt Marikina as we celebrate learning, creativity, and community spirit! Our annual events are designed to inspire, educate, and entertain students. The following are the contents that this website includes: Halloween Cosplay, Sinag Tamaraw Concert, Sinag Sports, Christmas Lightning, and Our Journey as a Tamaraw.</p>
+        </section>
+
+        
+        <section id="halloween-event">
+            <h2>Halloween Event</h2>
+            <p>Here are some memories of our unforgettable Halloween costume event as a baby tamaraw. Join us as we look back on this spooktacular event.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="mhark.jpeg" alt="Halloween 1">
+                </div>
+                <div class="card">
+                    <img src="tine.jpg" alt="Halloween 2">
+                </div>
+                <div class="card">
+                    <img src="received_521200674090624.jpeg" alt="Halloween 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="sinag-tamaraw">
+            <h2>Sinag Tamaraw</h2>
+            <p>This is our school's yearly welcoming event called Sinag Tamaraw, which is celebrated with concert and sports competitions. Come with us as we catch up on our core memories that we will have for a lifetime.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="66e78933-8513-46af-a165-f2b829720283.jpg" alt="Sinag 1">
+                </div>
+                <div class="card">
+                    <img src="IMG_20241122_141405_800.jpg" alt="Sinag 2">
+                </div>
+                <div class="card">
+                    <img src="86134066-0afe-4616-8f67-c4c52e132314.jpg" alt="Sinag 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="pasko-sa-piyu">
+            <h2>Pasko sa Piyu</h2>
+            <p>It's the most wonderful time of the year! Join us as we look back to our pre-christmas activity and enjoy the beauty of the Lighting of Belen.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="received_1204891483947527.jpeg" alt="Paskuhan 1">
+                </div>
+                <div class="card">
+                    <img src="received_1093255625598683.jpeg" alt="Paskuhan 2">
+                </div>
+                <div class="card">
+                    <img src="467695320_8945571395479104_7283786507485574357_n (1).jpg" alt="Paskuhan 3">
+                </div>
+            </div>
+        </section>
+
+
+        <section id="candid">
+            <h2>Group Experience</h2>
+            <p>Check out some candid photos and group meeting photos that we collected while doing this website. Let’s look back and enjoy these moments with us, giving you a glimpse into our group’s dynamic discussions and development.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="IMG_20241202_141050_403.jpg" alt="Candid 1">
+                </div>
+                <div class="card">
+                    <img src="IMG_20241202_144907_144.jpg" alt="Candid 2">
+                </div>
+                <div class="card">
+                    <img src="6d59320a-6807-4d40-8603-992ebe9514f2.jpg" alt="Candid 3">
+                </div>
+            </div>
+
+        <section id="life-lessons">
+            <h2>Life Lessons</h2>
+            <p>Our freshmen story is yours to learn from. Explore heartfelt reflections, triumphs and setbacks, of our group as this semester ends. Please enjoy this short video clip.</p>
+            <div class="grid">
+                <div class="card">
+                    <video width="1157" height="600" controls autoplay loop muted poster="placeholder.jpg">
+                        <source src="lv_0_20241211165012.mp4" type="video/webm">
+                    </video>
+                </div>
+            </div>
+        </section>
+        </section>
+        
+        <section id="unwinding-activities">
+            <h2>Go-To Unwinding Activities</h2>
+            <p>As students, we have our favorite ways to unwind. Here are some of the activities we enjoy to recharge and relax.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="462567253_531755406529121_2297886446396067556_n.jpg" alt="Unwind 1">
+                </div>
+                <div class="card">
+                    <img src="462576831_1521585679235620_8356450804190614351_n.jpg" alt="Unwind 2">
+                </div>
+                <div class="card">
+                    <img src="462579570_548608748042694_6597425077776135117_n.jpg" alt="Unwind 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="sample-projects">
+            <h2>Sample Project Outputs</h2>
+            <p>Here are some of the creative and academic projects we've worked on from our other subjects. These outputs showcase our dedication and teamwork.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="466978736_545990181665879_8137784631323454062_n.png" alt="Output 1">
+                </div>
+                <div class="card">
+                    <img src="462575342_566288009455340_9156051608287517390_n.jpg" alt="Output 2">
+                </div>
+                <div class="card">
+                    <img src="467469304_1115626463492255_6870575946687973555_n.jpg" alt="Output 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="student-candid-photos">
+            <h2>Other Candid Moments</h2>
+            <p>Here are some of our candid photos that capture fun, laughter, and the true spirit of our group.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="462581970_1310892946586200_2114402670822910739_n.jpg" alt="Candid Photo 1">
+                </div>
+                <div class="card">
+                    <img src="466117278_940254547466470_6616600489465069767_n.jpg" alt="Candid Photo 2">
+                </div>
+                <div class="card">
+                    <img src="465883540_937727661149953_1486287086722050654_n.jpg" alt="Candid Photo 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="first-week">
+            <h2>Our First Week in College</h2>
+            <p>Our first week in college was a mix of excitement, nerves, and discovery. Here are some moments we captured to share this milestone with you.</p>
+            <div class="grid">
+                <div class="card">
+                    <img src="465135579_510982195311321_2168323965097187555_n.jpg" alt="First Week 1">
+                </div>
+                <div class="card">
+                    <img src="462641589_8945910565455453_3897603651217745052_n.jpg" alt="First Week 2">
+                </div>
+                <div class="card">
+                    <img src="462641858_1192459472249907_7546823641415774575_n.jpg" alt="First Week 3">
+                </div>
+            </div>
+        </section>
+
+        
+        <section id="web-creators">
+            <h2>Behind the Web Page Creators</h2>
+            <div class="grid">
+                <div class="card">
+                    <img src="462572788_9041510105886623_8512122319575734226_n.jpg" alt="Kristine Vallota">
+                    <h3>Kristine Vallota</h3>
+                </div>
+                <div class="card">
+                    <img src="kath.jpg" alt="Katherine Traje">
+                    <h3>Katherine Traje</h3>
+                </div>
+                <div class="card">
+                    <img src="462571784_594383026410543_8530867024654955620_n.jpg" alt="Mhark Dhave Antiola">
+                    <h3>Mhark Dhave Antiola</h3>
+                </div>
+                <div class="card">
+                    <img src="465977711_1988360634979143_5112715742005912416_n.jpg" alt="John Dave Cruz">
+                    <h3>John Dave Cruz</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2024 FEU-Roosevelt | All rights reserved</p>
+    </footer>
+
+    <div id="progressBar" style="position: fixed; top: 0; left: 0; height: 5px; background: gold; width: 0%; z-index: 1000;"></div>
+
+    <script>
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+            document.getElementById('progressBar').style.width = `${scrollPercentage}%`;
+        });
+    </script>
+    
+    <script>
+        document.querySelectorAll('.card img').forEach(image => {
+            image.addEventListener('click', () => {
+                const modal = document.createElement('div');
+                modal.style.position = 'fixed';
+                modal.style.top = '0';
+                modal.style.left = '0';
+                modal.style.width = '100%';
+                modal.style.height = '100%';
+                modal.style.backgroundColor = 'rgba(0, 0, 0, 0.8)';
+                modal.style.display = 'flex';
+                modal.style.justifyContent = 'center';
+                modal.style.alignItems = 'center';
+                modal.style.zIndex = '1000';
+    
+                const modalImg = document.createElement('img');
+                modalImg.src = image.src;
+                modalImg.style.maxWidth = '90%';
+                modalImg.style.maxHeight = '90%';
+                modalImg.style.borderRadius = '8px';
+    
+                const closeModal = document.createElement('span');
+                closeModal.innerText = '×';
+                closeModal.style.position = 'absolute';
+                closeModal.style.top = '20px';
+                closeModal.style.right = '30px';
+                closeModal.style.fontSize = '30px';
+                closeModal.style.color = 'white';
+                closeModal.style.cursor = 'pointer';
+    
+                closeModal.addEventListener('click', () => modal.remove());
+    
+                modal.appendChild(modalImg);
+                modal.appendChild(closeModal);
+                document.body.appendChild(modal);
+            });
+        });
+    </script>
+    
+    <script>
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <button id="backToTop" title="Go to top">↑</button>
+
+    <div id="progressBar" style="position: fixed; top: 0; left: 0; height: 5px; background: gold; width: 0%; z-index: 1000;"></div>
+
+    <script>
+       
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPosition = window.scrollY;
+            const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+            document.getElementById('progressBar').style.width = `${scrollPercentage}%`;
+
+            
+            const backToTopButton = document.getElementById('backToTop');
+            backToTopButton.style.display = scrollPosition > 300 ? 'block' : 'none';
+        });
+
+        
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+
+</body>
+</html>
+
